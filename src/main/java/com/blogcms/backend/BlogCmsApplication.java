@@ -6,8 +6,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @SpringBootApplication
 public class BlogCmsApplication {
 
-	public static void main(String[] args) {
-		SpringApplication.run(BlogCmsApplication.class, args);
-	}
+    public static void main(String[] args) {
+        SpringApplication.run(BlogCmsApplication.class, args);
+    }
 
 }

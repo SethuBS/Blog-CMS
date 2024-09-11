@@ -14,8 +14,8 @@ import java.util.stream.Collectors;
 
 public class Mapper {
 
-    public static UserDTO map(User user){
-        if(user == null){
+    public static UserDTO map(User user) {
+        if (user == null) {
             return null;
         }
 
@@ -27,8 +27,8 @@ public class Mapper {
                 .build();
     }
 
-    public static User map(UserDTO userDTO){
-        if(userDTO == null){
+    public static User map(UserDTO userDTO) {
+        if (userDTO == null) {
             return null;
         }
 
@@ -40,8 +40,8 @@ public class Mapper {
                 .build();
     }
 
-    public static Post map(PostDTO postDTO){
-        if(postDTO == null){
+    public static Post map(PostDTO postDTO) {
+        if (postDTO == null) {
             return null;
         }
 
@@ -59,8 +59,8 @@ public class Mapper {
                 .build();
     }
 
-    public static PostDTO map(Post post){
-        if(post == null){
+    public static PostDTO map(Post post) {
+        if (post == null) {
             return null;
         }
 
@@ -78,8 +78,8 @@ public class Mapper {
                 .build();
     }
 
-    public static Tag map(TagDTO tagDTO){
-        if(tagDTO == null){
+    public static Tag map(TagDTO tagDTO) {
+        if (tagDTO == null) {
             return null;
         }
 
@@ -89,8 +89,8 @@ public class Mapper {
                 .build();
     }
 
-    public static TagDTO map(Tag tag){
-        if(tag == null){
+    public static TagDTO map(Tag tag) {
+        if (tag == null) {
             return null;
         }
 
@@ -100,8 +100,8 @@ public class Mapper {
                 .build();
     }
 
-    public static Comment map(CommentDTO commentDTO){
-        if(commentDTO == null){
+    public static Comment map(CommentDTO commentDTO) {
+        if (commentDTO == null) {
             return null;
         }
 
@@ -113,8 +113,8 @@ public class Mapper {
                 .build();
     }
 
-    public static CommentDTO map(Comment comment){
-        if(comment == null){
+    public static CommentDTO map(Comment comment) {
+        if (comment == null) {
             return null;
         }
 
