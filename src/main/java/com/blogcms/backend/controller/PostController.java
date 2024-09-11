@@ -3,6 +3,7 @@ package com.blogcms.backend.controller;
 import com.blogcms.backend.dto.PostDTO;
 import com.blogcms.backend.service.PostService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
@@ -15,25 +16,25 @@ public class PostController {
     private PostService postService;
 
     @GetMapping
-    public List<PostDTO> getAllPosts() {
-        return postService.getAllPosts();
+    public ResponseEntity<List<PostDTO>> getAllPosts() {
+        return ResponseEntity.ok(postService.getAllPosts());
     }
 
     @GetMapping("/{id}")
-    public PostDTO getPostById(@PathVariable("id") Long id) {
-        return postService.getPostById(id);
+    public ResponseEntity<PostDTO> getPostById(@PathVariable("id") Long id) {
+        return ResponseEntity.ok(postService.getPostById(id));
     }
 
     @PostMapping
     @PreAuthorize("hasRole('EDITOR') or hasRole('ADMIN')")
-    public PostDTO createPost(@RequestBody PostDTO postDTO) {
-        return postService.createPost(postDTO);
+    public ResponseEntity<PostDTO> createPost(@RequestBody PostDTO postDTO) {
+        return ResponseEntity.ok(postService.createPost(postDTO));
     }
 
     @PutMapping("/{id}")
     @PreAuthorize("hasRole('EDITOR') or hasRole('ADMIN')")
-    public PostDTO updatePost(@RequestBody PostDTO postDTO, @PathVariable("id") Long id) {
-        return postService.updatePost(postDTO, id);
+    public ResponseEntity<PostDTO> updatePost(@RequestBody PostDTO postDTO, @PathVariable("id") Long id) {
+        return ResponseEntity.ok(postService.updatePost(postDTO, id));
     }
 
     @DeleteMapping("/{id}")
