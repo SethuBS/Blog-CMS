@@ -1,9 +1,10 @@
 package com.blogcms.backend.enums;
 
+import com.blogcms.backend.deserializer.EnumValue;
 import lombok.Getter;
 
 @Getter
-public enum Role {
+public enum Role implements EnumValue {
     ADMIN("ADMIN"),
     EDITOR("EDITOR"),
     VIEWER("VIEWER");
@@ -12,5 +13,10 @@ public enum Role {
 
     Role(String value) {
         this.value = value;
+    }
+
+    @Override
+    public String getValue() {
+        return value;
     }
 }
